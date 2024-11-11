@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.PaginaInicial"
+             Title="Pagina Incial"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout>
+        <Grid  >
+            <!-- Imagem de Fundo -->
+            <Image Source="init.jpg"
+               Aspect="AspectFill"
+               Opacity="1.0"/>
+
+            <!-- Título no Topo -->
+
+            <VerticalStackLayout>
+                <Grid>
+                <Label
+                  Text="Bem Vindo ao Hotel Transilvânia"
+                  FontFamily="Rubik"
+                  FontSize="Medium"
+                  TextColor="Red"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center"
+                    Padding="20"/>
+            </Grid>
+
+            </VerticalStackLayout>
+
+                <Grid >
+                    <Button 
+                        Text="Quartos"
+                        VerticalOptions="End"
+                            HorizontalOptions="End"
+                            TextColor="Black"
+                            FontFamily="Kalam-Bold"
+                            BackgroundColor="Red"
+                            Clicked="Button_Clicked_Quartos"
+                            WidthRequest="110"
+                            HeightRequest="30"
+                            FontSize="Medium"
+                            Margin="10"/>
+                    <Button Grid.Row="3"
+                            Text="Sobre"
+                            VerticalOptions="End"
+                        HorizontalOptions="Start"
+                            TextColor="Black"
+                            FontFamily="Kalam-Bold"
+                            BackgroundColor="Red"
+                            Clicked="Button_Clicked_Sobre"
+                            WidthRequest="110"
+                            HeightRequest="30"
+                            FontSize="Medium"
+                            Margin="10"
+                            />
+
+                </Grid>
+
+        </Grid>
+    </VerticalStackLayout>
+
+</ContentPage>
+
+
+
+
+   

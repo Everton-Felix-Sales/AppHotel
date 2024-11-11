@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.PaginaSobre"
+             Title="PaginaSobre"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout>
+        <Grid>
+            <!-- Imagem de Fundo -->
+            <Image Source="download.jpg"
+                   Aspect="AspectFill"
+                   Opacity="0.5"/>
+
+            <!-- Título no Topo -->
+            <VerticalStackLayout>
+                <Label
+                    Text="Sobre"
+                    FontFamily="Rubik"
+                    FontSize="Large"
+                    TextColor="Red"
+                    HorizontalOptions="Center"
+                    Margin="10"/>
+
+                <!-- Texto no Meio -->
+                <VerticalStackLayout>
+                    <Label
+                    Text="Aqui, no Hotel Transilvânia,acreditamos na excelência em hospitalidade e no compromisso de oferecer a melhor experiência aos nossos hóspedes.Nossa equipe está dedicada a transformar cada estadia em momentos inesquecíveis, proporcionando conforto,segurança e uma recepção calorosa. Venha nos visitar e descobrir o que faz da MauiAppHotel um lugar especial!"
+                    FontFamily="Rubik"
+                    FontSize="Medium"
+                    TextColor="Black"
+                    HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Margin="20">
+                    <Label Text="DESENVOLVIDO POR:"
+              FontFamily="Rubik"
+              FontSize="Medium"
+              HorizontalOptions="Center"
+              TextColor="red"/>
+                    <Label Text="Everton Felix Nogueira Sales"
+              FontFamily="Kalam-Bold"
+              FontSize="Large"
+              HorizontalOptions="Center"
+              TextColor="Black" />
+                    <Label Text="ANO DE DESENVOLVIMENTO:"
+              FontFamily="Rubik"
+              FontSize="Medium"
+              HorizontalOptions="Center"
+              TextColor="red"/>
+                    <Label Text="30/10/2024"
+              FontFamily="Kalam-Bold"
+              FontSize="Large"
+              HorizontalOptions="Center"
+              TextColor="Black"/>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
+
+
+
+
+   

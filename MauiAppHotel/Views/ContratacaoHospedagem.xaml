@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False">
+
+    <VerticalStackLayout >
+        <Grid>
+            <Image
+                Source="contat.jpg"
+                />
+            <VerticalStackLayout>
+                <Label Text="Cálculo da Diária"
+                       FontSize="50"
+                        FontFamily="Rubik"
+                       TextColor="Red" />
+
+                <Frame CornerRadius="45"
+                        BackgroundColor="#00FFFFFF"
+                        Opacity="2.0"
+                        BorderColor="#00FFFFFF" Padding="10">
+                    <VerticalStackLayout BackgroundColor="#80FFFFFF"
+                        Opacity="1.0"
+                        >
+                        <Grid RowDefinitions="Auto, Auto, Auto"
+                              ColumnDefinitions="*, *, 2*">
+
+                            <Label Grid.Row="0" Grid.Column="0"
+                                   Text="Adultos:"
+                                   FontFamily="Rubik"
+                                   TextColor="Red"/>
+
+                            <Label Grid.Row="0" Grid.Column="1"
+                                   TextColor="Black"
+                                   Text="{Binding Value}"
+                                   FontFamily="Rubik"
+                                   BindingContext="{x:Reference stp_adultos}"/>
+
+                            <Stepper Grid.Row="0" Grid.Column="2"
+                                     x:Name="stp_adultos"
+                                     Minimum="0"
+                                     Maximum="10"
+                                     Increment="1" />
+
+                            <Label Grid.Row="3" Grid.Column="0"
+                                   Text="Monstros:"
+                                   TextColor="Red"
+                                   FontFamily="Rubik"/>
+
+                            <Label Grid.Row="2" Grid.Column="1"
+                                   TextColor="Black"
+                                   Text="{Binding Value}"
+                                   FontFamily="Rubik"
+                                   BindingContext="{x:Reference stp_monstros}"/>
+
+                            <Stepper Grid.Row="2" Grid.Column="2"
+                                     x:Name="stp_monstros"
+                                     Minimum="0"
+                                     Maximum="10"
+                                     Increment="1" />
+
+                            <Label Grid.Row="1" Grid.Column="0"
+                                   Text="Crianças:"
+                                    FontFamily="Rubik"/>
+
+                            <Label Grid.Row="1" Grid.Column="1"
+                                   TextColor="Black"
+                                   Text="{Binding Value}"
+                                   FontFamily="Rubik"
+                                   BindingContext="{x:Reference stp_criancas}"/>
+
+                            <Stepper Grid.Row="1" Grid.Column="2"
+                                     x:Name="stp_criancas"
+                                     Minimum="0"
+                                     Maximum="10"
+                                     Increment="1" />
+                        </Grid>
+
+                        <Frame BackgroundColor="#00FFFFFF"
+                               Opacity="1.0"
+                               BorderColor="#00FFFFFF"
+                               Padding="10" Margin="10">
+                            <VerticalStackLayout BackgroundColor="#80FFFFFF"
+                                                 Opacity="1.0"
+                                                               >
+
+                                <Label 
+                                      Text="Escolha sua Suíte"
+                                      TextTransform="Uppercase"
+                                      FontFamily="Rubik"
+                                      FontSize="Subtitle"
+                                      TextColor="Black"/>
+
+                                <Picker x:Name="pck_quarto"
+                                        BackgroundColor="#00FFFFFF"
+                                        Opacity="1.0"
+                                        Title="Selecione sua Acomodação"
+                                        FontFamily="Rubik"
+                                        ItemDisplayBinding="{Binding Descricao}"/>
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#80FFFFFF"
+                               Opacity="1.0"
+                               BorderColor="#00FFFFFF"
+                               Padding="10"
+                               Margin="10">
+                            <VerticalStackLayout 
+                                BackgroundColor="#00FFFFFF"
+                                Opacity="1.0"
+                                Spacing="10">
+
+                                <Label Text="Período da Estadia"
+                                       TextTransform="Uppercase"
+                                       FontFamily="Rubik"
+                                       FontSize="Subtitle"
+                                       TextColor="Black"/>
+
+                                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label Text="Check-in:"
+                                           FontFamily="Rubik"/>
+                                    <DatePicker x:Name="dtpck_checkin"
+                                                DateSelected="dtpck_checkin_DateSelected"
+                                                Format="dd/MM/yyyy" />
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label Text="Check-out:" 
+                                           FontFamily="Rubik"/>
+                                    <DatePicker x:Name="dtpck_checkout"
+                                                Format="dd/MM/yyyy" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+
+                        <Button 
+                                Opacity="1.0"
+                                BorderColor="#00FFFFFF"
+                                Text="RESERVAR" TextColor="Black"
+                                FontFamily="Rubik" 
+                                FontSize="Medium"
+                                Clicked="Button_Clicked"
+                                BackgroundColor="#90FF0000"/>
+
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+            
+        </Grid>
+
+       
+
+    </VerticalStackLayout>
+
+</ContentPage>
